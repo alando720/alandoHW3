@@ -16,7 +16,9 @@ document.getElementById("today").innerHTML = text;
 function validateDOB() {
   let dob=document.getElementById("dob");
   let date = new Date(dob.value);
-  let maxDate = new Date().setFullYear(maxDate.getFullYear() - 120);
+  let today = new Date();
+  let maxDate = new Date();
+  maxDate.setFullYear(today.getFullYear() - 120);
 
   if (date > new Date()) {
       document.getElementById("dob-error").innerHTML = "Date cannot be a future date.";
