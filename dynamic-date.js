@@ -12,6 +12,68 @@ const d = new Date();
 let text = d.toLocaleDateString();
 document.getElementById("today").innerHTML = text;
 
+//validate first name code
+function validateFirstName() {
+  firstname = document.getElementById("firstname").value.trim();
+  var namePattern = /^[a-zA-Z'-]+$/;
+
+  if(firstname == "") {
+    document.getElementById("firstName-error").innerHTML = "First name field cannot be empty.";
+    return false;
+  } else if (!firstname.match(namePattern)) {
+    document.getElementById("firstName-error".innerHTML = "Letters, apostrophes, and dashes only.";
+    return false;
+  } else if (firstname.length < 2) { 
+    document.getElementById("firstName-error").innerHTML = "First name cannot be less than 2 characters.";
+    return false; 
+  } else if (firstname.length > 30) { 
+    document.getElementById("firstName-error").innerHTML = "First name cannot be more than 30 characters.";
+    return false;
+  } else {
+    document.getElementById("firstName-error").innerHTML = "";
+    return true;
+  }
+}
+// validate midddle initial code
+function validateMiddleInit() {
+  middleinit = document.getElementById("middleinit").value.trim();
+  var namePattern = /^[A-Z]+$/;
+
+  middleinit = middleinit.toUppercase();
+  document.getElementyById("middleinit").value = middleinit;
+  if(middleinit.length > 1) {
+    document.getElementById("middleInit-error").innerHTML = "Middle initial can only be one character.";
+    return false;
+  } else if (!middleinit.match(namePattern)) {
+    document.getElementById("middleInit-errorr".innerHTML = "Letters only";
+    return false;
+  } else {
+    document.getElementById("middleInit-error").innerHTML = "";
+    return true;
+  }
+}
+// validate last name code
+function validateLastName() {
+  lastname = document.getElementById("lastname").value.trim();
+  var namePattern = /^[a-zA-Z'-]+$/;
+
+  if(lastname == "") {
+    document.getElementById("lastName-error").innerHTML = "Lase name field cannot be empty.";
+    return false;
+  } else if (!lastname.match(namePattern)) {
+    document.getElementById("lastName-error".innerHTML = "Letters, apostrophes, and dashes only.";
+    return false;
+  } else if (lastname.length < 2) { 
+    document.getElementById("lastName-error").innerHTML = "Last name cannot be less than 2 characters.";
+    return false; 
+  } else if (lastname.length > 30) { 
+    document.getElementById("lastName-error").innerHTML = "Last name cannot be more than 30 characters.";
+    return false;
+  } else {
+    document.getElementById("lastName-error").innerHTML = "";
+    return true;
+  }
+}
 //dob validation code
 function validateDOB() {
   let dob=document.getElementById("dob");
