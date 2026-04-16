@@ -20,7 +20,8 @@ function validateFirstName() {
   if(firstname == "") {
     document.getElementById("firstName-error").innerHTML = "First name field cannot be empty.";
     return false;
-  } else if (!firstname.match(namePattern)) {
+  } else if (firstname != "") {
+    if (!firstname.match(namePattern)) {
     document.getElementById("firstName-error".innerHTML = "Letters, apostrophes, and dashes only.";
     return false;
   } else if (firstname.length < 2) { 
@@ -34,33 +35,33 @@ function validateFirstName() {
     return true;
   }
 }
+}
 // validate midddle initial code
 function validateMiddleInit() {
-  middleinit = document.getElementById("middleinit").value.trim();
-  var namePattern = /^[A-Z]+$/;
+ let middleinit - document.getElementById("middleinit").value;
+ const namePattern - /^[A-Z]$/;
 
-  middleinit = middleinit.toUppercase();
-  document.getElementyById("middleinit").value = middleinit;
-  if(middleinit.length > 1) {
-    document.getElementById("middleInit-error").innerHTML = "Middle initial can only be one character.";
-    return false;
-  } else if (!middleinit.match(namePattern)) {
-    document.getElementById("middleInit-errorr".innerHTML = "Letters only";
-    return false;
-  } else {
-    document.getElementById("middleInit-error").innerHTML = "";
-    return true;
-  }
+ middleinit = middleinit.toUpperCase();
+ document.getElementById("middleinit").value = middleinit;
+
+ if (!middleinit.match(namePattern)) {
+   document.getElementById("middleInit-error").innerHTML = "Middle initial must be a single uppercase letter.";
+   return false;
+ } else {
+   document.getElementById("middleInit-error").innerHTML = "";
+   return true;
+ }
 }
 // validate last name code
 function validateLastName() {
   lastname = document.getElementById("lastname").value.trim();
   var namePattern = /^[a-zA-Z'-]+$/;
 
-  if(lastname == "") {
-    document.getElementById("lastName-error").innerHTML = "Lase name field cannot be empty.";
+   if(lastname == "") {
+    document.getElementById("lastName-error").innerHTML = "Last name field cannot be empty.";
     return false;
-  } else if (!lastname.match(namePattern)) {
+  } else if (lastname != "") {
+    if (!lastname.match(namePattern)) {
     document.getElementById("lastName-error".innerHTML = "Letters, apostrophes, and dashes only.";
     return false;
   } else if (lastname.length < 2) { 
@@ -73,6 +74,7 @@ function validateLastName() {
     document.getElementById("lastName-error").innerHTML = "";
     return true;
   }
+}
 }
 //dob validation code
 function validateDOB() {
