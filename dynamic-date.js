@@ -246,16 +246,7 @@ function showAlert() {
 //validates stuff on the form
 function validateForm() {
     let valid = true;
-
-    if (!validateFirstName()) {
-        valid = false;
-    }
-    if (!validateMiddleInit()) {
-        valid = false;
-    }
-    if (!validateLastName()) {
-        valid = false;
-    }
+  
     if (!validateDOB()) {
         valid = false;
     }
