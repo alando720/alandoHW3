@@ -235,11 +235,60 @@ function removeReview() {
 }
 
 function showAlert() {
-  var alertBox = document.getElementById("
+  var alertBox = document.getElementById("alert-box");
+  var closeAlert = document.getElementById("close-alert");
 
+  alertBox.style.display = "block";
+  closeAlert.onclick = function() {
+      alertBox.style.display = "none";
+  };
+}
+//validates stuff on the form
+function validateForm() {
+    let valid = true;
 
-
-
+    if (!validateFirstName()) {
+        valid = false;
+    }
+    if (!validateMiddleInit()) {
+        valid = false;
+    }
+    if (!validateLastName()) {
+        valid = false;
+    }
+    if (!validateDOB()) {
+        valid = false;
+    }
+    if (!validateSSN()) {
+        valid = false;
+    }
+    if (!validateAddress1()) {
+        valid = false;
+    }
+    if (!validatezip()) {
+        valid = false;
+    }
+    if (!validateEmail()) {
+        valid = false;
+    }
+    if (!validatePhoneNum()) {
+        valid = false;
+    }
+    if (!validateUID()) {
+        valid = false;
+    }
+    if (!validatepass()) {
+        valid = false;
+    }
+    if (!confirmpass()) {
+        valid = false;
+    }
+     if (valid) {
+         document.getElementById("submit").disabled = false;
+     } else{
+        showAlert();
+     }
+ }
 
 
 
