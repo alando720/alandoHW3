@@ -175,6 +175,8 @@ function validatepass() {
     errorContainer.innerHTML = errorMessage
     .map((message) => `<span>${message}</span><br/>`)
     .join("");
+
+    return errorMessage.length === 0;
 }
 
 //confirm password validation code
