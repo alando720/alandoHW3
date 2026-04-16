@@ -14,7 +14,7 @@ document.getElementById("today").innerHTML = text;
 
 //validate first name code
 function validateFirstName() {
-  firstname = document.getElementById("firstname").value.trim();
+  let firstname = document.getElementById("firstname").value.trim();
   var namePattern = /^[a-zA-Z'-]+$/;
 
   if(firstname == "") {
@@ -22,7 +22,7 @@ function validateFirstName() {
     return false;
   } else if (firstname != "") {
     if (!firstname.match(namePattern)) {
-    document.getElementById("firstName-error".innerHTML = "Letters, apostrophes, and dashes only.";
+    document.getElementById("firstName-error").innerHTML = "Letters, apostrophes, and dashes only.";
     return false;
   } else if (firstname.length < 2) { 
     document.getElementById("firstName-error").innerHTML = "First name cannot be less than 2 characters.";
@@ -38,8 +38,8 @@ function validateFirstName() {
 }
 // validate midddle initial code
 function validateMiddleInit() {
- let middleinit - document.getElementById("middleinit").value;
- const namePattern - /^[A-Z]$/;
+ let middleinit = document.getElementById("middleinit").value;
+ const namePattern = /^[A-Z]$/;
 
  middleinit = middleinit.toUpperCase();
  document.getElementById("middleinit").value = middleinit;
@@ -54,7 +54,7 @@ function validateMiddleInit() {
 }
 // validate last name code
 function validateLastName() {
-  lastname = document.getElementById("lastname").value.trim();
+  let lastname = document.getElementById("lastname").value.trim();
   var namePattern = /^[a-zA-Z'-]+$/;
 
    if(lastname == "") {
@@ -62,7 +62,7 @@ function validateLastName() {
     return false;
   } else if (lastname != "") {
     if (!lastname.match(namePattern)) {
-    document.getElementById("lastName-error".innerHTML = "Letters, apostrophes, and dashes only.";
+    document.getElementById("lastName-error").innerHTML = "Letters, apostrophes, and dashes only.";
     return false;
   } else if (lastname.length < 2) { 
     document.getElementById("lastName-error").innerHTML = "Last name cannot be less than 2 characters.";
