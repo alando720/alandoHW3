@@ -480,6 +480,8 @@ Description: Homework 1 Patient Registration Form
 					<input type="reset" name="reset" id="reset">
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<input type="button" name="review" id="review" value="Review" onclick="showInput()">
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="button" name="validate" id="validate" value="validate" onclick="validateForm()">
 				</center>
           </tr>
         </table>
@@ -504,5 +506,11 @@ Description: Homework 1 Patient Registration Form
 	<p id="footer">2026 NewLife Medical Clinic | <br>PO BOX 991 <br>Houston, TX 77086 | <a href="https://www.bauer.uh.edu/" target="_blank" rel="noopener noreferrer">Contact Us!</p>
 </footer>
 <script src="dynamic-date.js"></script>
+<div id="alert-box">
+   <div id="alert-content">
+	   	<h4>Please fill all of the information</h4>
+	   	<button id="close-alert">Ok</button>
+   </div>
+</div>
    </body>
 </html>
